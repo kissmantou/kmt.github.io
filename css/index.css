@@ -11,13 +11,13 @@ a{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 24px;
     background: linear-gradient(90deg, #03a9f4, #f441a5,
      #ffeb3b, #03a9f4);
-    background-size: 500%;
-    width: 450px;
-    height: 120px;
-    line-height: 120px;
+    background-size: 400%;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
     text-shadow: #000000;
     text-align: center;
     color: #ffffff;
@@ -33,7 +33,7 @@ a::before{
     bottom: -7px;
     background: linear-gradient(90deg, #03a9f4, #f441a5,
     #ffeb3b, #03a9f4);
-    background-size: 500%;
+    background-size: 400%;
     border-radius: 45px;
     filter: blur(20px);
     z-index: -1;

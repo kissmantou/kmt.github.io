@@ -5,26 +5,31 @@
 body{
     background: #000000;
 }
-a{
+
+
+
+
+
+.shadow{
     text-decoration: none;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
-    background: linear-gradient(90deg, #03a9f4, #f441a5,
-     #ffeb3b, #03a9f4);
+    font-size: 2vh;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
     background-size: 400%;
-    width: 300px;
-    height: 100px;
+    width: 30%;
+    height: 10%;
     line-height: 100px;
-    text-shadow: #000000;
     text-align: center;
     color: #ffffff;
     border-radius: 45px;
     z-index: 1;
 }
-a::before{
+
+
+.shadow::before{
     content:"";
     position: absolute;
     left: -7px;
@@ -37,13 +42,15 @@ a::before{
     border-radius: 45px;
     filter: blur(20px);
     z-index: -1;
-}
-
-a:hover{
     animation: sun 8s infinite;
 }
 
-a:hover::before{
+
+.shadow:hover{
+    animation: sun 8s infinite;
+}
+
+.shadow:hover::before{
     animation: sun 8s infinite;
 }
 
@@ -51,4 +58,62 @@ a:hover::before{
     100%{
         background-position: -400% 0;
     }
+}
+
+.t_text{
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    left: 20%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 10%;
+    z-index: 1;
+    color: gray;
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    user-select: none;
+}
+.t_text::after{
+    content: attr(data-text);
+    color:transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(left, #03a9f4, #f441a5,
+    #ffeb3b, #03a9f4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    clip-path: circle(150px at 0% 50%);
+    -webkit-clip-path: circle(150px at 0% 50%);
+    animation: light 5s infinite;
+}
+
+@keyframes light{
+    0%{
+        clip-path: circle(150px at 0% 50%);
+        -webkit-clip-path: circle(150px at 0% 50%);
+    }
+    50%{
+        clip-path: circle(150px at 100% 50%);
+        -webkit-clip-path: circle(150px at 100% 50%);
+    }
+    100%{
+        clip-path: circle(150px at 0% 50%);
+        -webkit-clip-path: circle(150px at 0% 50%);
+    }
+}
+
+
+
+
+.t_text::before{
+    content: attr(data-text);
+    position: absolute;
+    z-index: 2;
+    filter: blur(30px);
+    mix-blend-mode: difference;
 }

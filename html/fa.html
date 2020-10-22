@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我能做什么</title>
-    <script src="../js/hello.js"></script>
+    
     <link rel="stylesheet" href="../css/myhome.css">
+    <audio src="music/click.ogg" id="click"></audio>
     
 </head>
 <body>
@@ -29,7 +30,26 @@
             </li>
 
             <li class='ul_light'>
-                <button class="btn red_button" >test</button>
+                <button class="btn red_button" onclick="dow('open_ul_f')">列表</button>
+                    <!-- 第一个按钮的展开列表 -->
+                    <ul id="open_ul_f" style="display: none;" class='open_ul'>
+
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn red2_button li_b'>元素1</button>
+                        </li>
+
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn red2_button li_b'>元素2</button>
+                        </li>
+
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn red2_button li_b'>元素3</button>
+                        </li>
+                    </ul>
+                    <!-- 展开结束 -->
             </li>
 
             <li>
@@ -37,7 +57,26 @@
             </li>
 
             <li class='ul_light'>
-                <button class="btn green_button">test</button>
+                <button class="btn green_button" onclick="dow('open_ul_s')">test</button>
+                    <!-- 第二个按钮的展开列表 -->
+                    <ul id="open_ul_s" style="display: none;" class='open_ul'>
+
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn green2_button li_b'>元素1</button>
+                        </li>
+    
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn green2_button li_b'>元素2</button>
+                        </li>
+    
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn green2_button li_b'>元素3</button>
+                        </li>
+                    </ul>
+                    <!-- 展开结束 -->
             </li>
 
             <li>
@@ -45,8 +84,29 @@
             </li>
 
             <li class='ul_light'>
-                <button class="btn yellow_button" >test</button>
+                <button class="btn yellow_button" onclick="dow('open_ul_t')">test</button>
+                    <!-- 第三个按钮的展开列表 -->
+                    <ul id="open_ul_t" style="display: none;" class='open_ul'>
+
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn yellow2_button li_b'>元素1</button>
+                        </li>
+
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn yellow2_button li_b'>元素2</button>
+                        </li>
+
+                        <li class="open_li">
+                            <p class='li_p' data-text="▷">▷</p>
+                            <button class='btn yellow2_button li_b'>元素3</button>
+                        </li>
+                    </ul>
+                    <!-- 展开结束 -->
             </li>
+
+            <!-- 列表部分绘制结束 -->
         </ul>
     </li>
 
@@ -67,3 +127,4 @@
 
 </body>
 </html>
+<script src="../js/hello.js"></script>

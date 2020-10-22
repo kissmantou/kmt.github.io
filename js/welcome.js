@@ -1,8 +1,9 @@
 var isPause = true;
-var music_src = document.getElementById("player");
 
 
-function mp() {
+
+function mp(u) {
+    var music_src = document.getElementById(u);
     try {
        if(isPause){
             music_src.play();
@@ -17,3 +18,4 @@ function mp() {
         alert(error);
 }
 }
+

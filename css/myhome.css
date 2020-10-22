@@ -4,12 +4,14 @@
     font-family: "montserrat",sans-serif;
 }
 body{
-    background: blackblack;
+    background: black;
     height: 100vh;
     /*display: flex;*/
     /*align-items: center;*/
     justify-content: space-around;
 }
+
+
 
 
 
@@ -94,6 +96,17 @@ body{
     color: #3fd860;
 }
 
+/* 子颜色 */
+.red2_button{
+    color:  #f38ee2;
+}
+.green2_button{
+    color:  #36cec6;
+}
+.yellow2_button{
+    color:  #daf16f;
+}
+
 
 
 
@@ -137,3 +150,48 @@ body{
 .btn:hover::after{
     right: 80%;
 }
+
+/* 可展开列表 */
+.open_ul{
+    height: 100%;
+    width: 100%;
+    margin-top: 7px;
+
+
+}
+
+.open_li{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.li_p{
+    position: relative;
+    width: 10%;
+    font-size: 20px;
+    margin-left: 10%;
+    
+}
+
+.li_p::after{
+    content: attr(data-text);
+    color:transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(left, #03a9f4, #f441a5,
+    #ffeb3b, #03a9f4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 400%;
+    animation: sun 8s infinite;
+}
+
+.li_b{
+    width: 100%;
+    margin-bottom: 5px;
+}
+

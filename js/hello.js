@@ -12,7 +12,15 @@ function GetUrlPath(){
     　　　　return url+'/file/';
 }
 
-
-
-
 /* -- 分割线-- */
+var list_disply = [0,0,0,0]
+function dow(i){
+    var dis_view = document.getElementById(i);
+    if(dis_view.style.display=='none'){
+        dis_view.style.display='block'
+    }
+    else{
+        dis_view.style.display='none'
+    }
+
+}

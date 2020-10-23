@@ -22,7 +22,26 @@
             </li>
 
             <li class='ul_light'>
-                <button onclick="re()" class="btn blue_button">back</button>
+                <button onclick="dow('open_ul_z')" class="btn blue_button">list0</button>
+                 <!-- 第0个按钮的展开列表 -->
+                 <ul id="open_ul_z" style="display: none;" class='open_ul'>
+
+                    <li class="open_li">
+                        <p class='li_p' data-text="▷">▷</p>
+                        <button class='btn blue2_button li_b'>元素1</button>
+                    </li>
+
+                    <li class="open_li">
+                        <p class='li_p' data-text="▷">▷</p>
+                        <button class='btn blue2_button li_b'>元素2</button>
+                    </li>
+
+                    <li class="open_li">
+                        <p class='li_p' data-text="▷">▷</p>
+                        <button class='btn blue2_button li_b'>元素3</button>
+                    </li>
+                </ul>
+                <!-- 展开结束 -->
             </li>
 
             <li>
@@ -112,9 +131,52 @@
 
     <li class="t_li">
         <ul class="s_ul">
-            <li class='t_li_f'> </li>
+            <!-- 顶部个人主页侧滑绘制 -->
+            <li class='t_li_f'> 
+                
+                <input type='checkbox' id='sidemenu'>
+                <aside>
+                    <br/>
+                        <ul id="sideul">
+                            
+                        <li>
+                            <a onclick="re()">back</a>
+                        </li>
 
-            <li class="t_li_s"> </li>
+                        <br/>
+
+                        <li>
+                            <a>开发中...</a>
+                        </li>
+
+
+                        </ul>
+                </aside>
+
+
+
+
+                <!-- 顶部个人主页绘制 -->
+                <img src="../images/maho.gif" class="face_img">
+                <p class='face_p'>你好呀，欢迎来到我的个人主页</p>
+                <p class='face_p'>左边为我的个人毕生所学，下面的小按钮为菜单</p>
+
+
+
+
+                <!-- 绘制结束 下面是按钮位置 -->
+                <div id='wrap'>
+                    <label id='sideMenuControl' for='sidemenu'>≡</label>
+                    <!--for 属性规定 label 与哪个表单元素绑定，即将这个控制侧边栏进出的按钮与checkbox绑定-->
+                </div>
+
+        <!-- 以下面小li结束全部个人页面绘制 -->
+            </li>
+
+            <!-- 底部个人主页绘制 -->
+            <li class="t_li_s">
+                <p class="face_p">开发中...</p>
+            </li>
         </ul>
     </li>
 

@@ -48,16 +48,7 @@ body{
     width: 30%;
 }
 
-.t_li_f{
-    background: black;
-    height: 70%;
-}
 
-.t_li_s{
-    margin-top: 0.2%;
-    background: black;
-    height: 30%;
-}
 /* --重要-- */
 
 
@@ -106,7 +97,9 @@ body{
 .yellow2_button{
     color:  #daf16f;
 }
-
+.blue2_button{
+    color: #163da7;
+}
 
 
 
@@ -195,3 +188,116 @@ body{
     margin-bottom: 5px;
 }
 
+/* 个人主页绘制 */
+
+.t_li_f{
+    background: black;
+    width: 100%;
+    height: 70%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.t_li_s{
+    margin-top: 0.2%;
+    background: black;
+    height: 30%;
+}
+
+
+/* 侧滑栏 ---------------------------------------------------------*/
+#sidemenu{
+    display: none;
+}
+
+#sidemenu:checked + aside {
+    /*为被选中的sidemenu后的aside设置属性（紧邻）*/
+    left: 30.2%;
+    /*点击按钮即选中checked后,侧边栏位置变为贴着左边,配合ease-out使用,有渐变滑出的效果*/
+}
+
+#sidemenu:checked ~ #wrap {
+      padding-left: 45%;
+}
+
+aside {
+    /*侧边栏,初始位置为-200px，即隐藏效果*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30%;
+    width: 30%;
+    height: 68%;
+    margin-top: 0.5%;
+    background:none;
+    transition: 0.2s ease-out;
+    /*动画效果的执行方式是ease-out，即侧边栏滑动效果为渐变式，而不是生硬的突然变化*/
+    z-index: 0;
+}
+
+
+/*控制侧边栏进出的按钮（外部包裹）*/
+#wrap {
+    padding: 10px;
+    transition: 0.2s ease-out;
+}
+
+/*控制侧边栏进出的按钮（内部文字样式）*/
+label {
+    /*控制侧边栏进出的按钮*/
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    border-radius: 70px;
+    color: white;
+    display: block;
+    font-family: Courier New;
+    background-size: 400%;
+    font-size: 25px;
+    width: 1em;
+    line-height: 1em;
+    text-align: center;
+    animation: sun 8s infinite;
+    position: absolute;
+}
+
+
+
+/* 绘制侧滑的小按钮 */
+#sideul a{
+    text-decoration: none;
+    position: absolute;
+
+    font-size: 15px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    margin-left: 15%;
+    width: 50%;
+    height: 20px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 45px;
+    z-index: 1;
+}
+
+#sideul a::before{
+    content:attr(data-text);
+    position: absolute;
+    left: -7px;
+    right: -7px;
+    top: -7px;
+    bottom: -7px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5,
+    #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 45px;
+    filter: blur(10px);
+    z-index: -1;
+    animation: sun 8s infinite;
+}
+/* 绘制页面 */
+.face_p{
+    color: white;
+}
+.face_img{
+    width: 80%;
+}

@@ -304,3 +304,31 @@ label {
     margin-left: 0.2%;
     height: 45%
 }
+/* 绘制底部布局 */
+
+.face_p1{
+    margin-left: 0.2%;
+    border: 1px solid;
+}
+
+
+
+
+
+
+
+
+
+/* .face_p1::after{
+    content: attr(data-text);
+    color:transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(left, #03a9f4, #f441a5,
+    #ffeb3b, #03a9f4);
+    background-clip: text;
+    -webkit-background-clip: text;
+} 
+存放一会
+*/

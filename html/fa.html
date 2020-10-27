@@ -28,17 +28,18 @@
 
                     <li class="open_li">
                         <p class='li_p' data-text="▷">▷</p>
-                        <button class='btn blue2_button li_b' onclick="download('python/阴阳师脚本.zip')">御魂脚本</button>
+                        <button class='btn blue2_button li_b' onclick="download('python/阴阳师脚本.zip','脚本')">御魂脚本</button>
                     </li>
 
                     <li class="open_li">
                         <p class='li_p' data-text="▷">▷</p>
-                        <button class='btn blue2_button li_b'>元素2</button>
+                        <button class='btn blue2_button li_b' onclick="download('python/绘制迷宫.zip','迷宫')">绘制迷宫</button>
                     </li>
 
                     <li class="open_li">
                         <p class='li_p' data-text="▷">▷</p>
                         <button class='btn blue2_button li_b'>元素3</button>
+
                     </li>
                 </ul>
                 <!-- 展开结束 -->
@@ -146,8 +147,15 @@
                         <br/>
 
                         <li>
-                            <a>开发中...</a>
+                            <a href="https://qhtLucifer.github.io/test.github.io/">友军</a>
                         </li>
+
+                        <br/>
+
+                        <li>
+                            <a>开发ing</a>
+                        </li>
+
 
 
                         </ul>
@@ -158,7 +166,7 @@
 
                 <!-- 顶部个人主页绘制 -->
                 <img src="../images/maho.gif" class="face_img">
-                <p class='face_p'>你好呀，欢迎来到我的个人主页</p>
+                <p class='face_p'>你好，欢迎来到我的个人主页</p>
                 <p class='face_p'>左边为我的个人毕生所学，下面的小按钮为菜单</p>
 
 
@@ -175,8 +183,16 @@
 
             <!-- 底部个人主页绘制 -->
             <li class="t_li_s">
-                <p class="face_p">开发中...</p>
-                <a href="#" id="link">点击下载</a>
+                <div>
+                    <br/>
+                    <p class="face_p1 red_button" id="p0_text">名称:</p>
+                    <br/>
+                    <p class="face_p1 green_button" id="p1_text">简介:</p>
+                    <br/>
+                    <p class="face_p1 blue_button" id="p2_text">配置:</p>
+                    <br/>
+                </div>
+                <a href="#" id="link" class='face_a'>点击下载</a>
             </li>
         </ul>
     </li>
@@ -190,4 +206,5 @@
 
 </body>
 </html>
+<script src="../js/content.js"></script>
 <script src="../js/hello.js"></script>

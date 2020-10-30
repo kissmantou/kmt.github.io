@@ -20,6 +20,7 @@ function dow(i){
     else{
         dis_view.style.display='none'
     }
+    playsound()
 
 }
 
@@ -28,4 +29,11 @@ function download(path,name){
     eval('document.getElementById("p0_text").innerHTML='+name+'.txt;') //使用eval纯粹是懒，看见了别笑话
     eval('document.getElementById("p1_text").innerHTML='+name+'.info;')
     eval('document.getElementById("p2_text").innerHTML='+name+'.con;')
+    playsound()
+}
+
+function playsound(){
+    var music_src = document.getElementById('click');
+    music_src.play();
+
 }

@@ -93,24 +93,24 @@ body{
     #ffeb3b, #03a9f4);
     background-clip: text;
     -webkit-background-clip: text;
-    clip-path: circle(150px at 0% 50%);
-    -webkit-clip-path: circle(150px at 0% 50%);
+    clip-path: circle(30% at 0% 50%);
+    -webkit-clip-path: circle(30% at 0% 50%);
     animation: light 5s infinite;
     filter: blur(3px);
 }
 
 @keyframes light{
     0%{
-        clip-path: circle(150px at 0% 50%);
-        -webkit-clip-path: circle(150px at 0% 50%);
+        clip-path: circle(30% at 0% 50%);
+        -webkit-clip-path: circle(30% at 0% 50%);
     }
     50%{
-        clip-path: circle(150px at 100% 50%);
-        -webkit-clip-path: circle(150px at 100% 50%);
+        clip-path: circle(30% at 100% 50%);
+        -webkit-clip-path: circle(30% at 100% 50%);
     }
     100%{
-        clip-path: circle(150px at 0% 50%);
-        -webkit-clip-path: circle(150px at 0% 50%);
+        clip-path: circle(30% at 0% 50%);
+        -webkit-clip-path: circle(30% at 0% 50%);
     }
 }
 

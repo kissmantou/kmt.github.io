@@ -64,9 +64,18 @@ body{
 .s_ul{
     height: 100%;
     list-style: none;
+    
 }
+
+/* 这里是限制滚动条 */
 .t_ul{
+    height: 100%;
     list-style: none;
+    overflow:auto
+}
+.t_ul::-webkit-scrollbar
+{
+width:0px;
 }
 
 .fill_li{
@@ -156,6 +165,7 @@ body{
     height: 100%;
     width: 100%;
     margin-top: 7px;
+    overflow:auto
 
 
 }

@@ -230,12 +230,13 @@ width:0px;
 
 #sidemenu:checked + aside {
     /*为被选中的sidemenu后的aside设置属性（紧邻）*/
-    left: 30.2%;
+    left: 61%;
     /*点击按钮即选中checked后,侧边栏位置变为贴着左边,配合ease-out使用,有渐变滑出的效果*/
 }
 
 #sidemenu:checked ~ #wrap {
-      padding-left: 45%;
+    /* 控制按钮移动 */
+      padding-left: 0%;
 }
 
 aside {
@@ -243,7 +244,7 @@ aside {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -30%;
+    left: -40%;
     width: 30%;
     height: 68%;
     margin-top: 0.5%;
@@ -278,9 +279,12 @@ label {
 }
 
 
+#sideul li{
+    list-style: none;
+}
 
 /* 绘制侧滑的小按钮 */
-#sideul a{
+/* #sideul a{
     text-decoration: none;
     position: absolute;
 
@@ -294,9 +298,9 @@ label {
     color: #ffffff;
     border-radius: 45px;
     z-index: 1;
-}
+} */
 
-#sideul a::before{
+/* #sideul a::before{
     content:attr(data-text);
     position: absolute;
     left: -7px;
@@ -310,17 +314,18 @@ label {
     filter: blur(10px);
     z-index: -1;
     animation: sun 8s infinite;
-}
+} */
 
 
 /* 绘制页面 */
 .face_p{
     margin-left: 0.2%;
+    width: 54%;
     color: white;
 }
 .face_img{
     margin-left: 0.2%;
-    height: 45%
+    height: 40%;
 }
 /* 绘制底部布局 */
 
@@ -342,10 +347,59 @@ label {
 
 }
 
+/* 这里是倒影按钮 */
+.container{
+    width: 100%;
+    height: 100%;
+}
+.container a{
+    position: relative;
+    display: block;
+    width: 70%;
+    height: 15%;
+    line-height: 40px;
+    text-align: center;
+    margin: 40px;
+    color: aqua;
+    font-size: 10px;
+    text-decoration: none;
+    transition:  all .3s ease-in-out;
+    /* 这一句话改变颜色 hue颜色滤镜，加度数改变颜色*/
+    filter: hue-rotate(calc(var(--i) * 60deg));
 
-
-
-
+}
+.container a::before,.container a::after{
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 50%;
+    border: 2px solid aqua;
+    transition: all 0.3s ease-in-out 0.3s; 
+}
+.container a::before{
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.container a::after{
+    right: 0;
+    bottom: 0;
+    border-top: 0;
+    border-left: 0;
+}
+.container a:hover{
+    background-color: aqua;
+    color: black;
+    box-shadow: 0 0 50px aqua;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(0,0,0,0.3));
+    transition-delay: 0.4s;
+}
+.container a:hover::before,.container a:hover::after{
+    width: 25%;
+    height: 75%;
+    transition-delay: 0s;
+}
 
 
 /* .face_p1::after{
